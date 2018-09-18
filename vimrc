@@ -29,9 +29,9 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'majutsushi/tagbar'
-Bundle 'edkolev/tmuxline.vim'
-Bundle 'faith/vim-go'
-"Plugin 'powerline/powerline'
+Plugin 'edkolev/tmuxline.vim'
+Plugin 'faith/vim-go'
+Plugin 'powerline/powerline'
 "Plugin 'Lokaltog/vim-powerline'
 Bundle 'vim-ctrlspace/vim-ctrlspace'
 "Bundle 'luochen1990/rainbow'
@@ -41,11 +41,11 @@ Bundle 'vim-ctrlspace/vim-ctrlspace'
 Plugin 'honza/vim-snippets'
 Plugin 'altercation/vim-colors-solarized' "solarize主题
 Plugin 'drmingdrmer/xptemplate'
-"Plugin '2072/PHP-Indenting-for-VIm' "PHP缩进
-"Bundle 'Lokaltog/vim-powerline'
-Bundle "yonchu/accelerated-smooth-scroll"
-Bundle "tacahiroy/ctrlp-funky"
-Bundle 'Raimondi/delimitMate'
+Plugin '2072/PHP-Indenting-for-VIm' "PHP缩进
+"Bundle "yonchu/accelerated-smooth-scroll"
+"Bundle "tacahiroy/ctrlp-funky"
+"Bundle 'Raimondi/delimitMate'
+
 Plugin 'CodeFalling/fcitx-vim-osx'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
@@ -68,6 +68,8 @@ Plugin 'garbas/vim-snipmate'
 call vundle#end()            " required
 "============Vundle Setting End============
 filetype plugin indent on "允许插件
+filetype on            " enables filetype detection
+filetype plugin on     " enables filetype specific plugins
 
 set laststatus=2
 let g:Powerline_symbols='unicode'
@@ -159,9 +161,9 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
-let g:snips_author='luoluo'
-let g:author='luoluo'
-let g:snips_email='luoluo@.com'
+let g:snips_author='Orpheus'
+let g:author='Orpheus'
+let g:snips_email='1024245303@qq.com'
 " powerline 
 set guifont=Source\ Code\ Pro\ for\ Powerline:h14
 set nocompatible
