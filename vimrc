@@ -19,7 +19,11 @@ Plugin 'taglist.vim'
 Plugin 'vim-airline'
 
 " plugin on GitHub repo
+" julia part
 Plugin 'JuliaEditorSupport/julia-vim'
+" go part
+Plugin 'faith/vim-go'
+
 Plugin 'ervandew/supertab'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
@@ -35,7 +39,6 @@ Plugin 'tpope/vim-repeat'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'majutsushi/tagbar'
 Plugin 'edkolev/tmuxline.vim'
-Plugin 'faith/vim-go'
 Plugin 'powerline/powerline'
 "Plugin 'Lokaltog/vim-powerline'
 Bundle 'vim-ctrlspace/vim-ctrlspace'
@@ -47,14 +50,31 @@ Plugin 'honza/vim-snippets'
 Plugin 'altercation/vim-colors-solarized' "solarize主题
 Plugin 'drmingdrmer/xptemplate'
 Plugin '2072/PHP-Indenting-for-VIm' "PHP缩进
-"Bundle "yonchu/accelerated-smooth-scroll"
-"Bundle "tacahiroy/ctrlp-funky"
+"Bundle 'yonchu/accelerated-smooth-scroll'
+"Bundle 'tacahiroy/ctrlp-funky'
 "Bundle 'Raimondi/delimitMate'
 
 Plugin 'CodeFalling/fcitx-vim-osx'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
+
+" python part
+"Plugin 'isnowfy/python-vim-instant-markdown'
+"Plugin 'jtratner/vim-flavored-markdown'
+"Plugin 'suan/vim-instant-markdown'
+"Plugin 'nelstrom/vim-markdown-preview'
+"python sytax checker
+"Plugin 'vim-scripts/Pydiction'
+"Plugin 'hdima/python-syntax'
+"Plugin 'w0rp/ale'
+"Plugin 'google/yapf'
+"Plugin 'fisadev/vim-isort'
+" weiluo
+Plugin 'tell-k/vim-autopep8'
+
+
+
 "下面是 vundle的一些命令等会尔会用到
 "
 " " Brief help
