@@ -40,6 +40,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'majutsushi/tagbar'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'powerline/powerline'
+Plugin 'puremourning/vimspector'
 "Plugin 'Lokaltog/vim-powerline'
 Bundle 'vim-ctrlspace/vim-ctrlspace'
 "Bundle 'luochen1990/rainbow'
@@ -73,6 +74,8 @@ Plugin 'garbas/vim-snipmate'
 " weiluo
 Plugin 'tell-k/vim-autopep8'
 
+"add javascript vim
+Plugin 'pangloss/vim-javascript'
 
 
 "下面是 vundle的一些命令等会尔会用到
@@ -302,6 +305,18 @@ let g:tagbar_type_ps1 = {
     \ ]
     \ }
 
+"YouCompleteMe
+" Enable debugging
+let g:ycm_keep_logfiles = 1
+let g:ycm_log_level = 'debug'
+" If the base settings don't repro, paste your existing config for YCM only,
+" here:
+" let g:ycm_....
+" Load YCM (only)
+let &rtp .= ',' . expand( '<sfile>:p:h' )
+filetype plugin indent on
+
+
 "funcy config
 noremap <Leader>fu :CtrlPFunky<Cr>
 " narrow the list down with a word under cursor
@@ -315,3 +330,35 @@ let g:ctrlp_extensions = ['funky']
 au FileType python let b:delimitMate_nesting_quotes = ['"']
 " 关闭某些类型文件的自动补全
 "au FileType mail let b:delimitMate_autoclose = 0
+let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py'
+
+""""""""""""""""""""""
+    "Quickly Run
+    """"""""""""""""""""""
+    map <F5> :call CompileRunGcc()<CR>
+    func! CompileRunGcc()
+        exec "w"
+        if &filetype == 'c'
+            exec "!g++ % -o %<"
+            exec "!time ./%<"
+        elseif &filetype == 'cpp'
+            exec "!g++ % -o %<"
+            exec "!time ./%<"
+        elseif &filetype == 'java'
+            exec "!javac %"
+            exec "!time java %<"
+        elseif &filetype == 'sh'
+            :!time bash %
+        elseif &filetype == 'python'
+            exec "!time python3.6 %"
+        elseif &filetype == 'html'
+            exec "!firefox % &"
+        elseif &filetype == 'go'
+    "        exec "!go build %<"
+            exec "!time go run %"
+        elseif &filetype == 'mkd'
+            exec "!~/.vim/markdown.pl % > %.html &"
+            exec "!firefox %.html &"
+        endif
+    endfunc
