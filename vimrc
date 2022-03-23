@@ -23,7 +23,7 @@ Plugin 'vim-airline'
 Plugin 'JuliaEditorSupport/julia-vim'
 " go part
 Plugin 'faith/vim-go'
-
+" normal part
 Plugin 'ervandew/supertab'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
@@ -71,11 +71,16 @@ Plugin 'garbas/vim-snipmate'
 "Plugin 'w0rp/ale'
 "Plugin 'google/yapf'
 "Plugin 'fisadev/vim-isort'
-" weiluo
+" weiluo part
 Plugin 'tell-k/vim-autopep8'
+
+" markdown part"
+Plugin 'shougo/neocomplete'
+Plugin 'ferrine/md-img-paste.vim'
 
 "add javascript vim
 Plugin 'pangloss/vim-javascript'
+
 
 
 "下面是 vundle的一些命令等会尔会用到
